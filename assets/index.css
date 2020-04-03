@@ -1,0 +1,120 @@
+html{
+    margin: 0;
+}
+
+.gallery-container-grid{
+    width: 94vw;
+    margin-left: 1vw;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    box-sizing: content-box;
+    border: 1vw solid rgb(194, 193, 197);
+    border-radius: 2.5vw;
+}
+
+.gallery-container-grid > .gallery-item{
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 1vw;
+    position: relative;
+}
+
+.gallery-item > img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 1vw;
+}
+
+.gallery-item > .curtain{
+    position: absolute;
+    width: 29.3vw;
+    height: 21.9vw;
+    z-index: 100;
+    background-color: rgb(0, 0, 0);
+    visibility: hidden;
+    opacity: 50%;
+    border-radius: 1vw;
+}
+
+.curtain>h3{
+    text-align: center;
+    font-size: 2vw;
+    color: white;
+    margin-top: 10vw;
+}
+
+.gallery-item:hover .curtain{
+    animation-name: animation-transition-curtain;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-direction: initial;
+    animation-fill-mode: forwards;
+    visibility: visible;
+}
+
+
+@keyframes animation-transition-curtain{
+    0%{
+        top: 20vw;
+    }
+    100%{
+        top: 0;
+    }
+}
+
+/*
+.gallery-container{
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: content-box;
+    border: 1vw solid rgb(194, 193, 197);
+    border-radius: 2.5vw;
+}
+
+.gallery-container .gallery-item{
+    box-sizing: content-box;
+    flex: 25%;
+    padding: .5%;
+    width: 100%;
+    height: auto;
+    border-radius: 1vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    border-radius: 1vw;  
+}
+
+.curtain{
+    font-size: 2vw;
+    text-align: center;
+    margin-left: -30.9vw;
+    background-color: rgb(233, 221, 221);
+    width: 30.9vw;
+    height: 23.2vw;
+    border-radius: 1vw;
+    visibility: hidden;
+}
+
+.gallery-item:hover .curtain{
+    animation-name: animation-transition-curtain;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-direction: initial;
+    visibility: visible;
+    opacity: 50%;
+}
+
+@keyframes animation-transition-curtain{
+    0%{
+        transform: translateY(30vh);
+    }
+    100%{
+        transform: translateY(5vh);
+    }
+}
+*/
